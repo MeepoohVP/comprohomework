@@ -5,8 +5,8 @@ import  work04.*;
 public class Int101Homework01 {
 
     public static void main(String[] args) {
-        work01Question(true, false, true, false, true, false);
-        work01Answer(true, false, true, false, true, false);
+        work01Question(true, false, true, false, true, true);
+        work01Answer(true, false, true, false, true, true);
         work02Question(1, 2, 3, 4, 5, 6);
         work02Answer(1, 2, 3, 4, 5, 6);
         work03UseOfUtilityClass();
@@ -23,7 +23,7 @@ public class Int101Homework01 {
        // remove () as many as possible from the following expression
        // but do not change the meaning of the expression; 
        // regardless of the values of the parameters: b1-b6 .
-       boolean b = b1 ^ b2 | b3 && b4 || b5 & b6;
+       boolean b = b1 ^ (b2 | b3) && b4 || b5 & b6;
        System.out.println("Work01:Answer: b = " + b);
     }
     static void work02Question(int v1, int v2, int v3, int v4, int v5, int v6) {
@@ -53,7 +53,9 @@ public class Int101Homework01 {
       3.4 Show in this "work03UseOfUtilityClass" method how to use 
           "calculateBMI" and "average" methods of "MyUtil" class.
       */
+       //Calculate BMI
        System.out.println("BMI = " + MyUtil.calculateBMI(45.6, 1.71));
+       //Average
        System.out.println("Average = " + MyUtil.average(7, 3, 6));
    }
 
@@ -96,18 +98,33 @@ public class Int101Homework01 {
       4.3 Show in this "work04UseOfObjectClass" method how to use 
           each method of "Person" and "BankAccount" objects.
       */
-       Person owner1 = new Person(1);
-       Person owner2 = new Person(2);
+       //Owner
+       Person owner1 = new Person(10001);
+       Person owner2 = new Person(10002);
+
+       //Create BankAccount
        BankAccount account1 = new BankAccount(1, owner1);
        BankAccount account2 = new BankAccount(2, owner2);
+
+       //Deposit
        account1.deposit(2000);
-       account1.deposit(3000);
+       account1.deposit(1500);
+
+       //withdraw
        account1.withdraw(450);
-       System.out.println(account1.getBalance());
+
+       //show balance
+       System.out.println("Account1 balance = " + account1.getBalance());
+
+       //transfer money account1 to account2
        account1.transfer(3000, account2);
-       System.out.println(account2.getBalance());
-       System.out.println(account1.getBalance());
+       //check balance
+       System.out.println("Account2 balance = " + account2.getBalance());
+       System.out.println("Account1 balance = " + account1.getBalance());
+
+       //toString
        System.out.println(account1);
+       System.out.println(account2);
 
    }
 }

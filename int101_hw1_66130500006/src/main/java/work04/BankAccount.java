@@ -35,9 +35,7 @@ public class BankAccount {
     @Override
     public String toString() {
         return "BankAccount{" +
-                "number=" + number +
-                ", owner=" + owner.getId() +
-                ", balance=" + balance +
+                 owner.getId() +
                 '}';
     }
 }

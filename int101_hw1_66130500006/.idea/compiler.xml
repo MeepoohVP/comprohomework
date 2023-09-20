@@ -6,7 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="int101s2023h01" />
+        <module name="int101_hw1_66130500006" />
       </profile>
     </annotationProcessing>
   </component>
