@@ -29,7 +29,6 @@ public class BankAccount {
     public void transfer(double amount, BankAccount account){
         this.withdraw(amount);
         account.deposit(amount);
-
     }
 
     @Override
